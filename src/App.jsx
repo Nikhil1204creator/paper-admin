@@ -12,6 +12,7 @@ import Dashboard from "./components/Dashboard";
 import Product from "./components/Product";
 import Login from "./components/Login";
 import { lightTheme, darkTheme } from "./theme";
+import AddProduct from "./components/AddProduct";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -78,6 +79,7 @@ function App() {
               <Routes>
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/product" element={<Product />} />
+                <Route path="/addproduct" element={<AddProduct />} />
                 <Route path="*" element={<Navigate to="/dashboard" />} />
               </Routes>
             </Box>
@@ -85,6 +87,7 @@ function App() {
         )}
       </Router>
     </ThemeProvider>
+    
   );
 }
 
